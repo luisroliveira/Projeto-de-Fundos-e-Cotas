@@ -1,0 +1,46 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{/each}}
+
+<h2>Lista de fundos: </h2>
+<hr>
+
+
+{{#each fundo}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{nome}}</h4>
+            <table border="1">
+                <tr>
+                    <th> CNPJ </th>
+                    <th> Razão Social </th>
+                    <th> Data da consulta </th>
+                    <th> Valor unitario </th>
+                    <th> Número de cotas </th>
+                    <th> Saldo de aplicação </th>
+                    <th> Preço medio </th>
+                    <th> Retorno da aplicação </th>
+                </tr>
+                <tr>
+                    <td>{{CNPJ}}</td>
+                    <td>{{razaoSocial}}</td>
+                    <td>{{dataDaConsulta}}</td>
+                    <td>R$ {{valorUnit}}</td>
+                    <td>{{numeroCotas}}</td>
+                    <td>R$ {{saldoAplicFundo}}</td>
+                    <td>R$ {{precoMedio}}</td>
+                    <td>{{retOperacao}} %</td>
+                </tr>
+            </table>
+            <a href="/principal/fundos/comprar/{{id}}"><button class="btn btn-success mt-4">Comprar fundo</button></a>
+            <div style='text-align:right'>
+                <a href="/principal/fundos/vender/{{id}}"><button class="btn btn-danger">Vender fundo</button></a>
+            </div>
+        </div>
+    </div>
+{{else}}
+{{/each}}
+<br>
+
+<div style="text-align:right"><a href="/principal/fundos/add"><button class="btn btn-success">Novo fundo</button></a></div>

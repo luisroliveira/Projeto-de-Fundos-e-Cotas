@@ -1,0 +1,27 @@
+<h3>Novo fundo</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/principal/fundos/novo" method="POST">
+            <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do fundo" class="form-control">
+                <br>
+            <label for="CNPJ">CNPJ</label>
+                <input type="integer" id="CNPJ" name="CNPJ" placeholder="CNPJ do fundo" class="form-control">
+                <br>
+            <label for="razaoSocial">Razão Social</label>
+                <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Razão Social do fundo" class="form-control">
+                <br>
+            <label for="dataDaConsulta">Data da Consulta</label> 
+                <input type="date" id="dataDaConsuta" name="dataDaConsulta" placeholder="Data da Consulta" class="form-control"> 
+                <br>   
+            <label for="valorUnit">Valor Unitário da Cota</label> 
+                <input type="integer" id="valorUnit" name="valorUnit" placeholder="Valor unitário" class="form-control">
+                <br>
+            <label for="numeroCotas">Numero de Cotas</label> 
+                <input type="integer" id="numeroCotas" name="numeroCotas" placeholder="Numero de Cotas" class="form-control"> 
+
+                <br>
+            <button type="submit" class="btn btn-success">Criar fundo</button>
+        </form>
+    </div>
+</div>
